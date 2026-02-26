@@ -1,0 +1,116 @@
+//Task1
+import java.util.Scanner;
+public class task1
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    
+    if(a>b)
+    {
+      int temp = a;
+      a = b;
+      b = temp;
+    }
+    int PrimeCount = 0;
+    for(int i = a; i <= b; i++)
+    {
+       int divCount = 0;
+       for(int j = 1; j <= i; j++)
+       {
+          if(i % j == 0)
+          {
+            divCount++; 
+          }
+       }
+       if(divCount == 2)
+       {
+         PrimeCount++; 
+       }
+    }
+    System.out.println("There are " + PrimeCount + " prime numbers between " + a + " and " + b + ".");
+  }
+}
+
+
+//Task2
+import java.util.Scanner;
+public class task2
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    String s1 = sc.nextLine();
+    String result = "";
+    for(int i = 0; i < s1.length(); i++)
+    {
+      char c = s1.charAt(i);
+      if(c == 'a')
+      {
+        result += 'z';
+      }
+      else
+      {
+        result += (char) (c-1);
+      } 
+    }
+    System.out.println(result);
+  }
+}
+
+
+//Task3
+import java.util.Scanner;
+public class task3
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("N = ");
+    int N = sc.nextInt();
+    int [] arr = new int [N];
+    for(int i=0; i<N; i++)
+    {
+      arr [i] = sc.nextInt(); 
+    }
+    
+    for(int i=0; i<N; i++)
+    {
+      boolean alreadyCounted = false;
+      for(int j=0; j<i; j++)
+      {
+        if(arr[i] == arr[j])
+        {
+          alreadyCounted = true;
+          break;
+        }
+      }
+        
+      if(alreadyCounted)
+      {
+        continue; 
+      }
+        
+      int count = 0;
+      for(int k=0; k<N; k++)
+      {
+        if(arr[i] == arr[k])
+        {
+          count++;
+        }  
+      }
+      System.out.println(arr[i] + " - " + count + " times");
+    }
+  } 
+}
+
+
+//Task4
+public class CSECourse
+{
+  public String courseName = "Programming Language II";
+  public String courseCode = "CSE111";
+  public int credit = 3;
+}
