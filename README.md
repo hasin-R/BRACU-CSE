@@ -1,2 +1,4 @@
 # BRACU-CSE
-All BRACU CSE course files, labs, assignments and practice codes.
+This repository contains all coursework and materials from my CSE program at BRAC University.
+
+Organized semester-wise and course-wise.
