@@ -1,0 +1,11 @@
+# Compiled Java files
+*.class
+
+# Backup files
+*.java~
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
