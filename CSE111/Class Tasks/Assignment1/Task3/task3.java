@@ -17,7 +17,6 @@ public class task3
       arr[i] = sc.nextDouble();
     }
 
-    // Step 1: Count consecutive duplicates
     int removedCount = 0;
 
     for(int i = 1; i < N; i++)
@@ -28,12 +27,9 @@ public class task3
       }
     }
 
-    // Step 2: Create new array with correct size
     double[] newArr = new double[N - removedCount];
 
-    // Step 3: Fill new array (simplest logic)
     int index = 0;
-
     for(int i = 0; i < N; i++)
     {
       if(i == 0 || arr[i] != arr[i - 1])
@@ -43,7 +39,6 @@ public class task3
       }
     }
 
-    // Print new array
     System.out.print("New Array: ");
     for(int i = 0; i < newArr.length; i++)
     {
@@ -53,7 +48,6 @@ public class task3
     System.out.println();
     System.out.println("Removed elements : " + removedCount);
 
-    sc.close();
   }
 }
 
